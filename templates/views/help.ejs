@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+     
+ <!------------------------------- LINK ALL THE CSS FILES, BOOTSTRAP CDN LINK, FONTAWESOME ---------------------------->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/732188d8b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/help.css"/>
+    <link rel="stylesheet" href="/css/nav.css"/>
+  </head>
+  <body>
+
+    <%- include('../partials/navbar') %>
+    
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+          <h1>Let's get you</br> some help!</h1>
+          <h6>Have any issue? Send us an <span class="email-us">email.</span></h6>
+          <div class="img-wrapper">
+          <img src="https://visme.co/blog/wp-content/uploads/2020/02/header.gif" border="0">
+            </div>
+        </div>
+        <div class="col-md-6" id="form" >
+          <form  action="https://formspree.io/f/xvonpknr"
+          method="POST">
+             
+        <div class="form-group" id="form-left">
+          <label for="username">Please Enter your name ?</label>
+          <input type="text" name="username"  placeholder="Enter your name" autocomplete="off" required class="form-control" id="list" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group" id="form-left">
+          <label for="email">Enter your Email .?</label>
+          <input type="email" name="email" placeholder="abc@gmail.com" autocomplete="off" required  class="form-control" id="tags">
+        </div>
+  
+          <div class="form-group" id="form-left">
+          <label for="describe">Please describe your Agoda thoughts ?</label>
+          <textarea type="text" name="describe" placeholder="Enter your response. " autocomplete="off" required class="form-control" id="describe" rows="5"></textarea>
+        </div>
+            
+            <div class="form-group" id="form-left">
+          <label for="exampleFormControlSelect1">Select Category</label>
+          <select class="form-control" id="exampleFormControlSelect1"   id="form-left">
+            <option>Getting started with Agoda.</option>
+            <option>Accesing your Account.</option>
+            <option>Help with a reservation</option>
+            <option>Getting protected through Aircover</option>
+            <option>Refunds</option>
+          </select>
+        </div>     
+      <button type="submit" class="btn btn-danger"><span>Send</span> <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        </div>
+      </div>
+ 
+  
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/732188d8b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/details.css" />
+  <link href="/css/nav.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- ----------------------------INCLUIDING NAVBAR------------------------------------------------ -->
+
+  <%- include('../partials/navbar') %>
+
+
+    <div class="main_container">
+
+      <span style="font-size: 50px;margin-left: 5%;"><b>
+          <%= data.name %>
+        </b></h2></span>
+      <div class="head">
+
+
+
+        <div><i class="fa-solid fa-arrow-up-from-bracket"></i> Share</div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div><i class="fa-regular fa-heart"></i> Save</div>
+      </div>
+      <p style="font-size: 30px;margin-left: 30px;">
+        <%=data.address.country%>
+      </p>
+
+      <div class="hotl_images_grid">
+
+        <div class="item-1"> <img src="<%=data.images.picture_url%>" class="card-img-top" alt="..." /></div>
+        <div class="item-2"> <img src="<%=data.images.picture_url%>" class="card-img-top" alt="..." /></div>
+        <div class="item-3"> <img src="<%=data.images.picture_url%>" class="card-img-top" alt="..." /></div>
+        <div class="item-4"> <img src="<%=data.images.picture_url%>" class="card-img-top" alt="..." /></div>
+        <div class="item-5"> <img src="<%=data.images.picture_url%>" class="card-img-top" alt="..." /></div>
+
+
+      </div>
+
+      <div class="about">
+        <h4><i class="fa-solid fa-house-chimney"></i> About This space</h4>
+        <span>
+          <p>
+            <%= data.description %>
+          </p>
+        </span>
+        <h4><i class="fa-solid fa-location-crosshairs"></i> The Space</h4>
+        <span>
+          <p>
+            <%=data.neighborhood_overview%>
+          </p>
+        </span>
+        <h4><i class="fa-solid fa-universal-access"></i> Guest access</h4>
+        <p>
+          <%= data.access %>
+        </p>
+        <h4><i class="fa-solid fa-clipboard"></i> Other Things to Note</h4>
+        <p>
+          <%= data.notes %>
+        </p>
+      </div>
+
+      <div class="offers">
+        <h1>What this place offers</h1>
+
+
+        <div class="offers">
+          <span>
+            <p><i class="fa-solid fa-eye"></i>
+              <%=data.amenities[0]%>
+          </span></p>
+          <span>
+            <p><i class="fa-solid fa-kitchen-set"></i>
+              <%=data.amenities[1]%>
+          </span> </p>
+          <span>
+            <p><i class="fa-solid fa-briefcase"></i>
+              <%=data.amenities[2]%>
+          </span></p>
+          <span>
+            <p><i class="fa-sharp fa-solid fa-building"></i>
+              <%=data.amenities[3]%>
+          </span> </p>
+          <span>
+            <p><i class="fa-solid fa-wifi"></i>
+              <%=data.amenities[4]%>
+          </span> </p>
+          <span>
+            <p><i class="fa-solid fa-umbrella-beach"></i>
+              <%=data.amenities[5]%>
+          </span> </p>
+
+        </div>
+
+
+
+
+
+
+      </div>
+   
+      <div class="review-right">
+
+        <!--------------------------- BOOKING FORM SECTION STARTS HERE ------------------------>
+
+        <div class="reserved">
+          <form name="myForm"  action="">
+            <h3>Reserve Your Home.</h3>
+            <p>Total price :<b>$,<%=data.price%></b></p>
+
+            <div class="form-group">
+              <input class="form-control" type="date"  name="fname"  required>
+              <span   class="form-label">Check In</span>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="date"   required>
+              <span value="0" class="form-label">Check out</span>
+            </div>
+            <div class="form-group">
+              <select class="form-control"   required>
+                <option value="0" selected hidden>no of rooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <span class="select-arrow"></span>
+              <span class="form-label">Rooms</span>
+            </div> 
+            <div class="form-group">
+              <select class="form-control" required>
+                <option value="0" selected hidden>no of adults</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <span class="select-arrow"></span>
+              <span class="form-label">Adults</span>
+            </div>
+            <div class="form-btn">
+              <button class="submit-btn" type="submit" onclick="validateForm()" id="form-submit">Reserve</button>
+            </div>
+        </div>
+      </form>
+
+       
+
+
+
+
+
+      </div>
+    </div>                
+
+
+
+<!-- -----------------------------------------FOOTER STARTS HERE  ----------------------------------------------->
+
+      <div class="footer">
+        <table style="position: absolute;left: 65px;">
+            <tr>
+                <td style="font-size: 20px">Help Center</td>
+                <td style="font-size: 20px">Aircover </td>
+                <td style="font-size: 20px"> Hotels & Business</td>
+                <td style="font-size:20px ">Supporting people with
+                  disabilities.</td>
+            </tr>
+            <tr>
+        <td><a href="#">Our Covid-19 Response</a></td>
+        <td><a href="#">Find a Store</a></td>
+        <td><a href="#">Report a neighbourhood
+          concern</a> </td>
+        <td><a href="#">Explore Hosting Resources</a></td>
+         </tr>
+        
+         <tr>
+            <td><a href="#">Airbnb your Home</a></td>
+            <td><a href="#">Aircover for hosts</a></td>
+            <td><a href="#">Visit your community forum</a></td>
+            <td><a href="#">How to host responsibly.</a></td>
+        </tr>
+        
+        <tr>
+            <td><a href="#">Shows</a></td>
+            <td><a href="#">Orange Camp</a></td>
+            <td><a href="#">Orange & Business</a></td>
+            <td><a href="#">Investors</a></td>
+        </tr>
+            <tr>
+                <td><a href="#">Apps</a></td>
+                <td><a href="#">Financing</a></td>
+                <td><a href="#">Host For Business</a></td>
+                <td><a href="#">Events</a></td>
+            </tr>
+        
+            <tr>
+                 <td><a href="#">Newsroom</a></td>
+                 <td><a href="#">Learn about new features.</a></td>
+                 <td><a href="#">Investors</a></td>
+                 <td><a href="#">Careers</a></td>
+        
+            </tr>
+        </table>
+        </div>
+
+
+
+    
+    <script>
+
+// =============================================FUNCTION TO SHOW BOOKING SUCCESFUL ==========================================
+
+      function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Please enter a Valid information ⚠️");
+    return false;
+  }else{
+    alert("Your Booking is Succesfull 👍 ✅");
+ 
+  }
+} 
+      </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6e29967266.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

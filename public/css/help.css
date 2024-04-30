@@ -1,0 +1,63 @@
+
+
+/* ===========================================IMAGES FOR HELP PAGE START HERE==================================== */
+
+
+/* ================================CSS FOR CONTAINER================================== */
+.container{
+    margin-top: 92px;
+    height:auto;
+    width:100vw;
+  }
+h1{
+    font-weight: 800 !important;
+    font-size: 50px;
+  }
+  
+  h6{
+    color: #716f6f
+  }
+  
+  /* ============================CSS FOR IMAGES TAKEN==================================== */
+  .img-wrapper{
+    width: 500px;
+    padding: 10px;
+  }
+   
+  
+  .img-wrapper img{
+    height: 300px;
+    width: 100%;
+  }
+  #form-left{
+  width:600px;
+   padding:5px;
+  }
+
+  /* ================================CSSS FOR TEXT AREA=============================== */
+  input, textarea, select{
+    background: #f7f9f8 !important;
+  }
+  
+  .email-us{
+    text-decoration: underline;
+  }
+  
+  label{
+    font-weight: 600;
+    color: #716f6f
+  }
+  
+  button{
+    margin-top: 8px;
+    float: right;
+  }
+  button span{
+    margin-left: 8px;  
+  
+  }
+  
+  button i{
+    margin: 0px 8px;
+  }
+/* ====================================CSS ENDS HERE ===================================== */

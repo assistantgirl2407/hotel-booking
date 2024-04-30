@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    <link href="/css/index.css" rel="stylesheet" type="text/css" /> -->
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/nav.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+
+    <!-- =====================================INCLUDING NAVBAR======================== -->
+
+    <%- include('../partials/navbar') %>
+
+
+    <!-- =====================================TRAVERSING DATA FROM ATLAS IN EACH TO SHOW HOTELS========================================= -->
+
+    <div class="container2">
+        <% data.forEach(element => { %>
+          <div class="card2">
+            <i class="fa fa-heart-o custom-heart-icon"></i>
+            <a href="/details/<%= element._id%>">
+              <img src="<%= element.images.picture_url %>" alt="<%= element.name %>">
+            </a>
+            <h4 style="font-size: 15px;"><%= element.name %></h4>
+            <p><b style="color: gray;"><%= element.address.country %></b></p>
+            <p><b> $ </b><%= element.price %><b>/ night </b></p>
+            <p><b> Rating : ⭐⭐⭐</b></p>
+          </div>
+        <% }); %>
+      </div>
+      
+
+
+<!-- ==================================INCLUDING FOOTER FROM PARTIALS============================================= -->
+
+  <%- include('../partials/footer') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

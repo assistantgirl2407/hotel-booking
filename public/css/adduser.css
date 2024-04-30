@@ -1,0 +1,40 @@
+/* =================================================CSS FOR ADD USER PAGE============================== */
+ 
+
+/* --------------------------------------------------COMMENT FOR BODY--------------------------------------------------*/
+body{
+    background-image: url("https://wallpapershome.com/images/pages/pic_h/25548.jpeg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    
+  }
+
+       /* ------COMMENT FOR CONTAINER------------- */
+  .container-fluid{
+        height:100vh;
+
+       padding: 10px;
+    }
+
+    .experience{
+      padding: 10px;
+      margin-top:90px;
+    }
+    h2{
+      padding: 10px;;
+      text-align: center;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 35px;
+      color:rgb(26, 2, 2);
+  
+
+    }
+    p{ 
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: red;
+    }
+
+
+   /* -----------------------------------------------COMMNET ENDS HERE----------------------------------------------- */
